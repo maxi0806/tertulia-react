@@ -25,7 +25,7 @@ const Galeria = () => {
           <div className="box-img" key={index}>
             <a href="#">
               <figure>
-                <img src={`/src/assets/galeria/${img}`} alt={`img-${index}`} />
+                <img src={`/galeria/${img}`} alt={`img-${index}`} />
               </figure>
             </a>
           </div>
