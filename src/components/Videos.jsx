@@ -1,5 +1,3 @@
-
-
 function Videos() {
   return (
     <div className="videos-container">
