@@ -1,74 +1,87 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import '../styles/contacto.css'; 
 
 const Contacto = () => {
-  const [nombre, setNombre] = useState('')
-  const [telefono, setTelefono] = useState('')
-  const [email, setEmail] = useState('')
-  const [mensaje, setMensaje] = useState('')
+  const [form, setForm] = useState({
+    nombre: '',
+    telefono: '',
+    email: '',
+    mensaje: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Formulario enviado:')
-    console.log({ nombre, telefono, email, mensaje })
-
-    // Opcional: mostrar alerta
-    alert('¡Gracias por tu mensaje!')
-
-    // Limpiar formulario
-    setNombre('')
-    setTelefono('')
-    setEmail('')
-    setMensaje('')
-  }
+    e.preventDefault();
+    console.log('Formulario enviado:', form);
+    alert('¡Gracias por contactarnos!');
+    setForm({
+      nombre: '',
+      telefono: '',
+      email: '',
+      mensaje: ''
+    });
+  };
 
   return (
-    <section id="contacto" className="container mt-5">
+    <div className="contacto-container" id='contacto'>
       <h2>Contacto</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label>Nombre</label>
-          <input
-            type="text"
-            className="form-control"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder="Tu nombre"
-          />
+      <form onSubmit={handleSubmit} className="contacto-form">
+        <div className="contacto-row">
+          <div className="contacto-col">
+            <label>Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              value={form.nombre}
+              onChange={handleChange}
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+          <div className="contacto-col">
+            <label>Teléfono</label>
+            <input
+              type="text"
+              name="telefono"
+              value={form.telefono}
+              onChange={handleChange}
+              placeholder="Tu teléfono"
+              required
+            />
+          </div>
         </div>
-        <div className="mb-3">
-          <label>Teléfono</label>
-          <input
-            type="text"
-            className="form-control"
-            value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
-            placeholder="Tu teléfono"
-          />
-        </div>
-        <div className="mb-3">
+        <div className="contacto-col">
           <label>Email</label>
           <input
             type="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            value={form.email}
+            onChange={handleChange}
             placeholder="Tu email"
+            required
           />
         </div>
-        <div className="mb-3">
+        <div className="contacto-col">
           <label>Mensaje</label>
           <textarea
-            className="form-control"
-            value={mensaje}
-            onChange={(e) => setMensaje(e.target.value)}
+            name="mensaje"
+            value={form.mensaje}
+            onChange={handleChange}
             placeholder="Escribí tu mensaje"
+            required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">Enviar</button>
+        <button type="submit" className="contacto-boton">Enviar</button>
       </form>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default Contacto
+export default Contacto;
+
+
 
