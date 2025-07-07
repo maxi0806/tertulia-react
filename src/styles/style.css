@@ -1,0 +1,126 @@
+
+body {
+  font-family: 'Cal Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo {
+    font-size: 4.5rem;
+}
+
+.hero {
+    position: relative;
+    background-image: url('/img/pexels-jayoke-851555.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.contenido-centrado {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero nav a {
+    color: white;
+    text-decoration: none;
+    filter: brightness(85%);
+    margin: 0 3rem;
+}
+
+.contenido-centrado h1 {
+    margin-bottom: 1.5rem;
+}
+
+.contenido-centrado p {
+    margin: 1.2rem
+}
+
+.contenido-centrado nav {
+    margin-top: 1.7rem
+}
+
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #6c4c41;
+    color: #f1f1f1;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+.buttons a:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-p {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: "Cal Sans", sans-serif;
+    color: #6c4c41;
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 5rem;
+}
+
+.video iframe {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.video {
+    margin: 0;
+    padding: 0;
+}
