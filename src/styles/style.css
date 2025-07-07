@@ -1,15 +1,5 @@
-body {
-    font-family: 'Cal Sans', sans-serif;
-}
-
 html {
     scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .titulo {
@@ -18,7 +8,7 @@ html {
 
 .hero {
     position: relative;
-    background-image: url('/img/pexels-jayoke-851555.jpg');
+    background-image: url(img/pexels-jayoke-851555.jpg);
     background-size: cover;
     background-position: center;
     height: 85vh;
@@ -50,7 +40,6 @@ html {
     color: white;
     text-decoration: none;
     filter: brightness(85%);
-    margin: 0 3rem;
 }
 
 .contenido-centrado h1 {
@@ -63,6 +52,33 @@ html {
 
 .contenido-centrado nav {
     margin-top: 1.7rem
+}
+
+.contenido-centrado nav a {
+    margin: 0 3rem;
+}
+
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .texto,
+    .imagen {
+        flex: 1 1 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .buttons {
@@ -102,6 +118,7 @@ html {
     justify-content: center;
     font-family: "Cal Sans", sans-serif;
     color: #6c4c41;
+    ;
 }
 
 .videos-container {
@@ -122,4 +139,34 @@ html {
 .video {
     margin: 0;
     padding: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        padding: 1rem;
+        background-position: center center;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .contenido-centrado p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .contenido-centrado nav a {
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .videos-container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
 }
