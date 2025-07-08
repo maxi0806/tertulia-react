@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/contacto.css'; 
 import '../styles/contacto.css';
 
 const Contacto = () => {
@@ -82,6 +83,4 @@ const Contacto = () => {
 };
 
 export default Contacto;
-
-
 

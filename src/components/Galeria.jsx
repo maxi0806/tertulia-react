@@ -38,3 +38,4 @@ const Galeria = () => {
 
 export default Galeria
 
+

@@ -13,9 +13,12 @@ function Header() {
           <a href="#contacto">Contacto</a>
           <Link to="/galeria">Galería</Link>
         </nav>
+
+
       </div>
     </header>
   )
 }
 
 export default Header
+
