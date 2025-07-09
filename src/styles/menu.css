@@ -33,13 +33,12 @@
   margin: 0.5rem 0;
 }
 
-.card button {
+.fondo-p {
   background-color: #6c4c41;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .titulo-menu {
